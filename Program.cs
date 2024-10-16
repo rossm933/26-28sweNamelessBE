@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using _26_28sweNamelessBE.API;
 using Microsoft.AspNetCore.Http.Json;
+using _26_28sweNamelessBE.API;
 namespace _26_28sweNamelessBE
 {
     public class Program
@@ -51,6 +52,7 @@ namespace _26_28sweNamelessBE
             VenueAPI.Map(app);
             RSVPAPI.Map(app);
 
+            EventAPI.Map(app);
             app.Run();
         }
     }
