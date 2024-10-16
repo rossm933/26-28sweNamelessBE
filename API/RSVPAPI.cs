@@ -7,6 +7,7 @@ namespace _26_28sweNamelessBE.API
     {
         public static void Map(WebApplication app)
         {
+            // Get User RSVPs
             app.MapGet("/rsvps/user/{uid}", (_26_28sweNamelessBEDbContext db, string uid) =>
             {
                 var rsvp = db.RSVPs
