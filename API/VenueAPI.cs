@@ -91,7 +91,6 @@ namespace _26_28sweNamelessBE.API
             {
                 Venue venue = new()
                 {
-                    Id = newVenue.Id,
                     Name = newVenue.Name,
                     Address = newVenue.Address,
                     City = newVenue.City,
@@ -129,6 +128,7 @@ namespace _26_28sweNamelessBE.API
                 db.SaveChanges();
                 return Results.Ok(new
                 {
+                    venue.Id,
                     venue.Name,
                     venue.Address,
                     venue.City,
