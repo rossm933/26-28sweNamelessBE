@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using _26_28sweNamelessBE.API;
 using Microsoft.AspNetCore.Http.Json;
 using _26_28sweNamelessBE.API;
 namespace _26_28sweNamelessBE
@@ -9,12 +10,19 @@ namespace _26_28sweNamelessBE
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddAuthorization();
-
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
 
             // allows passing datetimes without time zone data 
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
@@ -39,9 +47,12 @@ namespace _26_28sweNamelessBE
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
-
+            app.UseCors();
+            
+            VenueAPI.Map(app);
+            RSVPAPI.Map(app);
             EventAPI.Map(app);
+
             app.Run();
         }
     }
