@@ -13,7 +13,6 @@ namespace _26_28sweNamelessBE.API
             {
 
                 var events = await db.Events
-                .Include(e => e.RSVP)
                 .Include(e=> e.Venue)
                 .OrderBy(e => e.Date)
                 .ToListAsync();
