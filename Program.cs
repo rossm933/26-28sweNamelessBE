@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
+using _26_28sweNamelessBE.API;
 namespace _26_28sweNamelessBE
 {
     public class Program
@@ -40,6 +41,7 @@ namespace _26_28sweNamelessBE
 
             app.UseAuthorization();
 
+            EventAPI.Map(app);
             app.Run();
         }
     }
