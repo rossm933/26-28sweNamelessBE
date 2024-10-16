@@ -51,8 +51,8 @@ namespace _26_28sweNamelessBE
             
             VenueAPI.Map(app);
             RSVPAPI.Map(app);
-
             EventAPI.Map(app);
+
             app.Run();
         }
     }
