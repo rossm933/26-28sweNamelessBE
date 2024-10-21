@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;">Project name 💻</h1>
+<h1 align="center" style="font-weight: bold;">26-28sweNameless 💻</h1>
 
 <p align="center">
  <a href="#tech">Technologies</a> • 
@@ -9,43 +9,36 @@
 </p>
 
 <p align="center">
-    <b>Simple description of what your project do or how to use it.</b>
+    <b>The 26-28sweNamelessBE API provides endpoints for managing events and their venues. This collection allows users to retrieve, create, update, and delete both events and venues. It is designed to facilitate interactions with a collection of events and their respective venues in an organized and user-friendly way. Users are also able to RSVP to events they would like to attend.</b>
 </p>
 
 <h2 id="technologies">💻 Technologies</h2>
 
 - list of all technologies you used
-- Java
-- MongoDB
-- NodeJS
+- C#
+- .NET
+- SQL
+- Postman
 
 <h2 id="started">🚀 Getting started</h2>
 
-Here you describe how to run your project locally
+1.) Clone a repository option in Visual Studio 
+2.) Enter or type the repository location, and then select the Clone button 
+3.) To start building the program, press the green Start button on the Visual Studio toolbar, or press F5 or Ctrl+F5. Using the Start button or F5 runs the program under the debugger.
 
 <h3>Prerequisites</h3>
 
 Here you list all prerequisites necessary for running your project. For example:
 
-- [NodeJS](https://github.com/)
-- [Git 2](https://github.com)
+- [Visual Studio](https://visualstudio.microsoft.com/)
+- [.NET](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 <h3>Cloning</h3>
 
 How to clone your project
 
 ```bash
-git clone your-project-url-in-github
-```
-
-<h3>Config .env variables</h2>
-
-Use the `.env.example` as reference to create your configuration file `.env` with your AWS Credentials
-
-```yaml
-NODE_AWS_REGION=us-east-1
-NODE_AWS_KEY_ID={YOUR_AWS_KEY_ID}
-NODE_AWS_SECRET={YOUR_AWS_SECRET}
+git clone git@github.com:rossm933/26-28sweNamelessBE.git
 ```
 
 <h3>Starting</h3>
@@ -53,46 +46,31 @@ NODE_AWS_SECRET={YOUR_AWS_SECRET}
 How to start your project
 
 ```bash
-cd project-name
-npm some-command-to-run
+cd 26-28sweNamelessBE
+dotnet watch run
 ```
 
 <h2 id="routes">📍 API Endpoints</h2>
 
-Here you can list the main routes of your API, and what are their expected request bodies.
 ​
 | route               | description                                          
 |----------------------|-----------------------------------------------------
-| <kbd>GET /authenticate</kbd>     | retrieves user info see [response details](#get-auth-detail)
-| <kbd>POST /authenticate</kbd>     | authenticate user into the api see [request details](#post-auth-detail)
+| <kbd>GET /events</kbd>     | Retrieves events
+| <kbd>GET /events/{id}</kbd>     | Retrieves individual event by id
+| <kbd>GET /events/users/{uid}</kbd>     | Retrieves events by uid
+| <kbd>POST /events</kbd>     | Creates a new event
+| <kbd>PUT /events/{id}</kbd>     | Update an event
+| <kbd>DELETE /events/{id}</kbd>     | Deletes an event by id
+| <kbd>GET /venues</kbd>     | Retrieves venues
+| <kbd>GET /venues/{id}</kbd>     | Retrieves individual venue by id
+| <kbd>GET /venues/users/{uid}</kbd>     | Retrieves venues by uid
+| <kbd>POST /venues</kbd>     | Creates a new venue
+| <kbd>PUT /venues/{id}</kbd>     | Update a venue
+| <kbd>DELETE /venues/{id}</kbd>     | Deletes a venue by id
+| <kbd>GET /rsvps/users/{uid}</kbd>     | Retrieves RSVPs by uid
+| <kbd>POST /rsvps</kbd>     | Creates a new RSVP
+| <kbd>DELETE /rsvps/{id}</kbd>     | Deletes an rsvp by id
 
-<h3 id="get-auth-detail">GET /authenticate</h3>
-
-**RESPONSE**
-```json
-{
-  "name": "Fernanda Kipper",
-  "age": 20,
-  "email": "her-email@gmail.com"
-}
-```
-
-<h3 id="post-auth-detail">POST /authenticate</h3>
-
-**REQUEST**
-```json
-{
-  "username": "fernandakipper",
-  "password": "4444444"
-}
-```
-
-**RESPONSE**
-```json
-{
-  "token": "OwoMRHsaQwyAgVoc3OXmL1JhMVUYXGGBbCTK0GBgiYitwQwjf0gVoBmkbuyy0pSi"
-}
-```
 
 <h2 id="colab">🤝 Collaborators</h2>
 
@@ -101,26 +79,18 @@ Special thank you for all people that contributed for this project.
 <table>
   <tr>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/61896274?v=4" width="100px;" alt="Fernanda Kipper Profile Picture"/><br>
+      <a href="https://github.com/rossm933">
+        <img src="https://avatars.githubusercontent.com/u/148557558?v=4" width="100px;" alt="Ross Morgan Profile Picture"/><br>
         <sub>
-          <b>Fernanda Kipper</b>
+          <b>Ross Morgan</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://t.ctcdn.com.br/n7eZ74KAcU3iYwnQ89-ul9txVxc=/400x400/smart/filters:format(webp)/i490769.jpeg" width="100px;" alt="Elon Musk Picture"/><br>
+        <img src="https://avatars.githubusercontent.com/u/104770521?v=4" width="100px;" alt="Haley Smith Profile Picture"/><br>
         <sub>
-          <b>Elon Musk</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
-        <sub>
-          <b>Steve Jobs</b>
+          <b>Haley Smith</b>
         </sub>
       </a>
     </td>
@@ -131,7 +101,7 @@ Special thank you for all people that contributed for this project.
 
 Here you will explain how other developers can contribute to your project. For example, explaining how can create their branches, which patterns to follow and how to open an pull request
 
-1. `git clone https://github.com/Fernanda-Kipper/text-editor.git`
+1. `git clone git@github.com:rossm933/26-28sweNamelessBE.git`
 2. `git checkout -b feature/NAME`
 3. Follow commit patterns
 4. Open a Pull Request explaining the problem solved or feature made, if exists, append screenshot of visual modifications and wait for the review!
@@ -140,4 +110,4 @@ Here you will explain how other developers can contribute to your project. For e
 
 [📝 How to create a Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
 
-[💾 Commit pattern](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+[💾 API Postman Documentation]()
