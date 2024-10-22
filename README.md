@@ -23,8 +23,34 @@
 <h2 id="started">🚀 Getting started</h2>
 
 1.) Clone a repository option in Visual Studio 
-2.) Enter or type the repository location, and then select the Clone button 
-3.) To start building the program, press the green Start button on the Visual Studio toolbar, or press F5 or Ctrl+F5. Using the Start button or F5 runs the program under the debugger.
+2.) Enter or type the repository location, and then select the Clone button<br>
+
+In the terminal enter the following: 
+3.) ```bash
+dotnet ef --version
+```
+4.) ```bash
+dotnet tool install --global dotnet-ef
+```
+5.) ```bash
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 6.0
+```
+6.) ```bash
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0
+```
+7.) ```bash
+dotnet user-secrets set "_26_28sweNamelessBEDbConnectionString"
+```
+8.)```bash
+dotnet user-secrets set "_26_28sweNamelessBEDbConnectionString"
+```
+9.)```bash
+"Host=localhost;Port=5432;Username=postgres;Password="YourPgAdminPassword"!;Database=_26_28sweNamelessBE"
+```
+10.)```bash
+"dotnet ef database update"
+```
+11.) To start building the program, press the green Start button on the Visual Studio toolbar, or press F5 or Ctrl+F5. Using the Start button or F5 runs the program under the debugger.
 
 <h3>Prerequisites</h3>
 
