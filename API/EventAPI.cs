@@ -20,8 +20,7 @@ namespace _26_28sweNamelessBE.API
                 return Results.Ok(events);
 
             });
-            
-            // Get All Events by uid
+
             app.MapGet("/events/users/{uid}", async (_26_28sweNamelessBEDbContext db, string uid) =>
             {
                 var userEvents = await db.Events
@@ -29,13 +28,9 @@ namespace _26_28sweNamelessBE.API
                     .Include(e => e.Venue)
                     .Where(e => e.Uid == uid)
                     .OrderBy(e => e.Date)
-                    .ToListAsync();                 
+                    .ToListAsync();
 
-                if (!userEvents.Any())
-                {
-                    return Results.NotFound("No events found for this user.");
-                }
-
+                // Return an empty array with 200 OK if no events are found
                 return Results.Ok(userEvents);
             });
 
