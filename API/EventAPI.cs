@@ -33,7 +33,7 @@ namespace _26_28sweNamelessBE.API
 
                 if (!userEvents.Any())
                 {
-                    return Results.NotFound("No events found for this user.");
+                    return Results.NotFound();
                 }
 
                 return Results.Ok(userEvents);
