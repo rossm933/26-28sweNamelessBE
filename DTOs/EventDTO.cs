@@ -8,6 +8,7 @@ namespace _26_28sweNamelessBE.DTOs
         public string? Artist { get; set; }
         public int VenueId { get; set; }
 
+        public  string? ImageUrl { get; set; }
         public string? TicketUrl { get; set; }
 
         public decimal TicketPrice { get; set; }
