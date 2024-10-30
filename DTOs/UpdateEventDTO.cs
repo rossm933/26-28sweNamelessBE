@@ -6,7 +6,7 @@
         public int VenueId { get; set; }
         public DateTime Date { get; set; }
         public string? TicketUrl { get; set; }
-
+        public string? ImageUrl { get; set; }
         public decimal TicketPrice { get; set; }
     }
 }

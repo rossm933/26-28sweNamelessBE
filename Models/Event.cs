@@ -7,6 +7,7 @@
         public string? Artist { get; set; }
         public int VenueId { get; set; }
 
+        public string? ImageUrl { get; set; }
         public Venue? Venue { get; set; }
         public string? TicketUrl { get; set; }
 

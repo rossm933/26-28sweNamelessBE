@@ -61,6 +61,7 @@ namespace _26_28sweNamelessBE.API
                     VenueId = eventDTO.VenueId,
                     TicketUrl = eventDTO.TicketUrl,
                     TicketPrice = eventDTO.TicketPrice,
+                    ImageUrl = eventDTO.ImageUrl,
                 };
 
                 db.Events.Add(newEvent);
@@ -84,6 +85,7 @@ namespace _26_28sweNamelessBE.API
                 eventToUpdate.VenueId = eventDTO.VenueId;
                 eventToUpdate.TicketUrl = eventDTO.TicketUrl;
                 eventToUpdate.TicketPrice = eventDTO.TicketPrice;
+                eventToUpdate.ImageUrl = eventDTO.ImageUrl;
 
                 try
                 {
