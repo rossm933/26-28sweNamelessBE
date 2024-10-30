@@ -36,6 +36,9 @@ namespace _26_28sweNamelessBE.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("text");
+
                     b.Property<decimal>("TicketPrice")
                         .HasColumnType("numeric");
 
@@ -60,6 +63,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 101,
                             Artist = "The Rolling Waves",
                             Date = new DateTime(2024, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://img.freepik.com/premium-photo/rear-view-silhouette-group-people-watching-music-concert-with-different-lights_1004086-165.jpg",
                             TicketPrice = 65.50m,
                             TicketUrl = "https://example.com/tickets/rolling-waves",
                             Uid = "V4ZZtExf09dyP1GLH7Yhz7QqiOq2",
@@ -70,6 +74,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 102,
                             Artist = "Electric Dreams",
                             Date = new DateTime(2024, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://www.stagespot.com/media/wysiwyg/587293828-stage-lighting-wallpaper.jpg",
                             TicketPrice = 80.00m,
                             TicketUrl = "https://example.com/tickets/electric-dreams",
                             Uid = "ZpQoucFlCVNP5c0WunWKIi0mVKE3",
@@ -80,6 +85,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 103,
                             Artist = "The Jazz Collective",
                             Date = new DateTime(2024, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiovrj7xRN01ZmE-GGTHwHg1a6lmqN1KoSJHPr6yWomExfjIcnQpawXUd2C3NuY_1Dj9GfXUW2lsgkwYFZBfNSZ2X5qKExfZuSh0BbfOTYEMrHhclOKCHoo6BD1NMnqUJBJmQp4JES3qpo/s1600/Edit_Scary_Little_Friends_0035.JPG",
                             TicketPrice = 50.00m,
                             TicketUrl = "https://example.com/tickets/jazz-collective",
                             Uid = "Yy2T2FeWvZdd4W8epNHt37AId6J2",
@@ -90,6 +96,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 104,
                             Artist = "Symphony of Stars",
                             Date = new DateTime(2024, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://cdn.britannica.com/58/155258-050-2F8189A9/Symphony-concert-Svetlanov-Hall-Moscow-International-House.jpg",
                             TicketPrice = 95.75m,
                             TicketUrl = "https://example.com/tickets/symphony-stars",
                             Uid = "Yy2T2FeWvZdd4W8epNHt37AId6J2",
@@ -100,6 +107,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 105,
                             Artist = "Rock Legends",
                             Date = new DateTime(2024, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://img.freepik.com/premium-photo/crowded-place-group-different-people-attending-live-concert-having-fun-singling-listening-music_489646-25884.jpg",
                             TicketPrice = 120.00m,
                             TicketUrl = "https://example.com/tickets/rock-legends",
                             Uid = "ZpQoucFlCVNP5c0WunWKIi0mVKE3",
@@ -110,6 +118,7 @@ namespace _26_28sweNamelessBE.Migrations
                             Id = 106,
                             Artist = "Future Sounds",
                             Date = new DateTime(2024, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Classical_spectacular10.jpg",
                             TicketPrice = 75.99m,
                             TicketUrl = "https://example.com/tickets/future-sounds",
                             Uid = "V4ZZtExf09dyP1GLH7Yhz7QqiOq2",
